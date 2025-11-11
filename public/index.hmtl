@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Merkle Tree → Blockchain Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body class="bg-gray-900 text-gray-100 flex flex-col items-center min-h-screen p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Merkle Tree → Blockchain Archive</h1>
+
+    <div class="w-full max-w-4xl bg-gray-800 rounded-2xl p-6 shadow-lg space-y-6">
+      <!-- HASH LIST -->
+      <section>
+        <h2 class="text-xl font-semibold mb-3">Hashes from CSV</h2>
+        <div class="bg-gray-700 rounded-lg border border-gray-600">
+          <!-- single column, scrollable, safe wrapping -->
+          <ul
+            id="hash-list"
+            class="p-4 space-y-2 max-h-80 overflow-y-auto font-mono text-sm text-green-200 leading-relaxed"
+          ></ul>
+        </div>
+      </section>
+
+      <!-- MERKLE ROOT -->
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Merkle Root</h2>
+        <div class="bg-gray-700 p-4 rounded-lg border border-gray-600">
+          <code
+            id="merkle-root"
+            class="block font-mono text-sm text-yellow-200 break-all whitespace-pre-wrap"
+          ></code>
+        </div>
+      </section>
+
+      <!-- ARCHIVE BUTTON -->
+      <div class="flex justify-center">
+        <button
+          id="archive-btn"
+          class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold transition-colors"
+        >
+          Archive to Blockchain
+        </button>
+      </div>
+
+      <!-- RESULT BOX -->
+      <section>
+        <div class="bg-gray-700 rounded-lg border border-gray-600 p-4">
+          <div id="result" class="text-sm font-mono text-gray-100 space-y-3"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
